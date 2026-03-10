@@ -11,6 +11,7 @@ export class App {
   protected readonly title = signal('sdkpro01');
 
   add(a: number, b: number): number {
+    console.log('add', a, b);
     return a + b;
   }
 }
