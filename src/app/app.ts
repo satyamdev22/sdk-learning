@@ -9,4 +9,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('sdkpro01');
+
+  add(a: number, b: number): number {
+    return a + b;
+  }
 }

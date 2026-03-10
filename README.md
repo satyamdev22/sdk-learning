@@ -2,6 +2,55 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
 
+## TypeScript SDK
+
+This repository now includes a standalone TypeScript SDK at `sdk/`.
+
+Build the SDK:
+
+```bash
+npm run build:sdk
+```
+
+The SDK package outputs:
+
+- `sdk/dist/esm` (ES modules)
+- `sdk/dist/cjs` (CommonJS)
+- `sdk/dist/types` (TypeScript declarations)
+
+## SDK versioning and publish workflow
+
+1. Login to npm:
+
+```bash
+npm login
+```
+
+2. Publish from project root:
+
+```bash
+npm run sdk:release:patch
+```
+
+or
+
+```bash
+npm run sdk:release:minor
+npm run sdk:release:major
+```
+
+3. CI publish is also configured in `.github/workflows/publish-sdk.yml`.
+
+- Add repository secret: `NPM_TOKEN`
+- Push tag format: `sdk-v1.2.3`
+- Workflow builds `sdk/` and runs `npm publish`
+
+## How other apps use the SDK
+
+- Web app: install and import directly from npm.
+- React Native: install and import directly from npm.
+- Kotlin/Swift/Flutter: this TypeScript SDK is not directly importable in native runtimes; use platform-specific clients generated from a shared API contract, or expose this SDK through a JS bridge layer.
+
 ## Development server
 
 To start a local development server, run:

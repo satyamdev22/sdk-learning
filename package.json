@@ -5,6 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:sdk": "npm --prefix ./sdk run build",
+    "sdk:publish": "npm --prefix ./sdk publish --access public",
+    "sdk:release:patch": "npm --prefix ./sdk run release:patch",
+    "sdk:release:minor": "npm --prefix ./sdk run release:minor",
+    "sdk:release:major": "npm --prefix ./sdk run release:major",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
