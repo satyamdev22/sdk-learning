@@ -1,4 +1,4 @@
-# @sdkpro01/typescript-sdk
+# @satyamnpmdev/typescript-sdk
 
 A standalone TypeScript SDK extracted from `sdkpro01`.
 
@@ -34,7 +34,7 @@ Artifacts are generated into:
 ## Usage
 
 ```ts
-import { SdkPro01Client } from "@sdkpro01/typescript-sdk";
+import { SdkPro01Client } from "@satyamnpmdev/typescript-sdk";
 
 const sdk = new SdkPro01Client({
   baseUrl: "https://api.example.com",
@@ -50,11 +50,11 @@ const health = await sdk.health();
 ### Web app (TypeScript/JavaScript)
 
 ```bash
-npm install @sdkpro01/typescript-sdk
+npm install @satyamnpmdev/typescript-sdk
 ```
 
 ```ts
-import { SdkPro01Client } from "@sdkpro01/typescript-sdk";
+import { SdkPro01Client } from "@satyamnpmdev/typescript-sdk";
 ```
 
 ### React Native
@@ -62,7 +62,7 @@ import { SdkPro01Client } from "@sdkpro01/typescript-sdk";
 React Native can use the SDK directly:
 
 ```bash
-npm install @sdkpro01/typescript-sdk
+npm install @satyamnpmdev/typescript-sdk
 ```
 
 Then import exactly like web apps.
