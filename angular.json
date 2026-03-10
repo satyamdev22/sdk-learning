@@ -93,6 +93,36 @@
           }
         }
       }
+    },
+    "sdk-ui": {
+      "projectType": "library",
+      "root": "projects/sdk-ui",
+      "sourceRoot": "projects/sdk-ui/src",
+      "prefix": "sdk",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sdk-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sdk-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/sdk-ui/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
