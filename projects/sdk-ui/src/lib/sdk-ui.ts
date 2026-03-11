@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <section>
       <h2>{{ title }}</h2>
-      <p>{{ a }} + {{ b }} = {{ a + b }}</p>
+      <p>sum {{ a }} + {{ b }} = {{ a + b }}</p>
     </section>
   `,
   styleUrls: ['./sdk-ui.css'],
